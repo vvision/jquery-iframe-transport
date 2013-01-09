@@ -134,6 +134,7 @@
       // we add it as hidden fields to the form. This (currently) requires
       // the `processData` option to be set to false so that the data doesn't
       // get serialized to a string.
+      options.data = origOptions.data;
       if (typeof(options.data) === "string" && options.data.length > 0) {
         $.error("data must not be serialized");
       }
